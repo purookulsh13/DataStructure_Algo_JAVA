@@ -1,6 +1,6 @@
 public class Maxmin_diff {
-    public static void main(String args[]) {
-        int arr[] = { 20, 10, 40, 50, 45 };
+    public static void main(String[] args) {
+        int[] arr = { 20, 15, 40, 30, 45 };
         int max_value = arr[0];
         int min_value = arr[0];
         for (int i = 1; i < arr.length; i++) {

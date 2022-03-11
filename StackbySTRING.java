@@ -2,7 +2,7 @@ import java.util.*;
 
 class StackbySTRING {
     public static String reverse(String str) {
-        if (str == null || str.equals("")) {
+        if (str == null) {
             return str;
         }
         Stack<Character> stack = new Stack<Character>();
@@ -22,22 +22,27 @@ class StackbySTRING {
         Scanner s = new Scanner(System.in);
         stack obj1 = new stack();
         int n = s.nextInt();
-        while(n!=0) {
-            String str = s.next();
-            String sub = str.substring(0, 1);
-            String rem = str.substring(1);
-            String temp = reverse(rem);
-            sub = sub + temp;
+        try {
+            while (n != 0) {
+                String str = s.next();
+                String sub = str.substring(0, 1);
+                String rem = str.substring(1);
+                String temp = reverse(rem);
+                sub = sub + temp;
 
-            obj1.push(sub);
-            n--;
+                obj1.push(sub);
+                n--;
+            }
+            obj1.display();
+        } catch (Exception e) {
+            System.out.println("Exception occur");
         }
-        obj1.display();
         s.close();
     }
+
 }
 
-class stack {
+class stack_13 {
     class NodeS {
         String Name;
         NodeS next;
